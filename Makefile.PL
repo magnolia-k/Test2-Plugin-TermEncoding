@@ -22,7 +22,7 @@ WriteMakefile(
     },
 
     TEST_REQUIRES => {
-        'Test::More'        => 1.3,
+        'Test2::Suite'        => 0.000070,
     },
 
     PREREQ_PM		=> {
@@ -30,4 +30,22 @@ WriteMakefile(
     },
 
     test => {TESTS               => 't/*.t t/*/*/*.t'},
+
+    META_MERGE		=> {
+        "meta-spec" => { version => 2 },
+
+        "resources" => {
+            "homepage" => "https://github.com/magnolia-k/Test2-Plugin-TermEncoding",
+
+            "bugtracker" => {
+                "web" => "https://github.com/magnolia-k/Test2-Plugin-TermEncoding/issues",
+            },
+
+            "repository" => {
+                "type" => "git",
+                "url"  => "https://github.com/magnolia-k/Test2-Plugin-TermEncoding.git",
+                "web"  => "https://github.com/magnolia-k/Test2-Plugin-TermEncoding",
+            },
+        },
+    }
 );

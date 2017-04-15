@@ -50,8 +50,29 @@ __END__
 
 Test2::Plugin::TermEncoding - Test2 plugin to test with the encoding of the terminal
 
+=head1 DESCRIPTION
+
+Change the encoding of the Test2 output formatter according to the encoding of the terminal.
+Or not output to the terminal (eg pipe), it is utf8.
+
+=head1 SYNOPSIS
+
+    use Test2::Plugin::TermEncoding;
+
 =head1 AUTHOR
 
-Magnolia.k
+=over 4
+
+=item Magnolia.k E<lt>magnolia@cpan.orgE<gt>.
+
+=back
+
+=head1 COPYRIGHT
+
+Copyright 2017 Magnolia.K E<lt>magnolia@cpan.orgE<gt>.
+
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
+See F<http://dev.perl.org/licenses/>
 
 =cut

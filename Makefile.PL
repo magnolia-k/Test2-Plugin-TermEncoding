@@ -6,7 +6,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME                => 'Test2-Plugin-TermEncoding',
+    NAME                => 'Test2::Plugin::TermEncoding',
     AUTHOR              => q{magnolia <magnolia.k@icloud.com>},
     VERSION_FROM        => 'lib/Test2/Plugin/TermEncoding.pm',
     ABSTRACT_FROM       => 'lib/Test2/Plugin/TermEncoding.pm',

@@ -19,6 +19,8 @@ use Test2::Tools::Basic;
 use Test2::Tools::Compare;
 use Test2::API qw(test2_stack);
 
+use Term::Encoding;
+
 note "pragma"; {
     ok(utf8::is_utf8("発"), "utf8 pragma is on");
 }
@@ -29,12 +31,13 @@ note "io_layers"; {
 }
 
 note "format_handles"; {
+    my $encoding = (-t STDOUT) ? Term::Encoding::term_encoding : 'utf8';
     my $format = test2_stack()->top->format;
     my $handles = $format->handles;
     for my $hn (0 .. @$handles) {
         my $h = $handles->[$hn] || next;
         my $layers = get_layers($h);
-        ok($layers->{utf8}, "utf8 is on for formatter handle $hn");
+        ok($layers->{$encoding}, "encoding: $encoding is on for formatter handle $hn");
     }
 }
 
